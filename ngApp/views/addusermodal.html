@@ -1,0 +1,59 @@
+<div class="modal-header">
+  <h2>Add User</h2><br>
+</div>
+
+<div class="modal-body">
+  <table>
+    <tr>
+      <td>firstName:</td>
+      <td><input type="text" ng-model="controller.newUser.firstName" placeholder="first name" required />*</td>
+    </tr>
+    <tr>
+      <td>lastName:</td>
+      <td><input type="text" ng-model="controller.newUser.lastName" placeholder="last name" required />*</td>
+    </tr>
+    <tr>
+      <td>password:</td>
+      <td><input type="text" ng-model="controller.newUser.password" placeholder="temporary password" required />*</td>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td><input type="text" ng-model="controller.newUser.email" placeholder="email" required />*</td>
+    </tr>
+    <tr>
+      <td>address:</td>
+      <td><input type="text" ng-model="controller.newUser.address" placeholder="address" /></td>
+    </tr>
+    <tr>
+      <td>address2:</td>
+      <td><input type="text" ng-model="controller.newUser.address2" placeholder="address2" /></td>
+    </tr>
+    <tr>
+      <td>city:</td>
+      <td><input type="text" ng-model="controller.newUser.city" placeholder="city" /></td>
+    </tr>
+    <tr>
+      <td>state:</td>
+      <td><input type="text" ng-model="controller.newUser.state" placeholder="state" /></td>
+    </tr>
+    <tr>
+      <td>zip:</td>
+      <td><input type="text" ng-model="controller.newUser.zip" placeholder="zip" /></td>
+    </tr>
+    <tr>
+      <td>phone:</td>
+      <td><input type="text" ng-model="controller.newUser.phone" placeholder="phone" /></td>
+    </tr>
+    <tr>
+      <td>accessLevel:</td>
+      <td><select ng-model="controller.newUser.accessLevel" placeholder="access Level" required >
+       <option ng-repeat="accessLevel in controller.displayedAccessLevel" value="{{accessLevel.level}}">{{accessLevel.display}}</option>
+     </select>*</td>
+    </tr>
+  </table>
+  </div>
+
+<div class="modal-footer">
+  <button ng-click="controller.ok()" class="btn btn-danger">Cancel</button>
+  <button ng-click="controller.addUser()" class="btn btn-primary">Add User</button>
+</div>

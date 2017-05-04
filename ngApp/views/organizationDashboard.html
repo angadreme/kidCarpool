@@ -1,0 +1,44 @@
+<h2>{{controller.Organization.organizationName}}</h2>
+
+<div>
+  <h3>Users</h3>
+  <button ng-click="controller.addUserModal(controller.Organization)" class="btn btn-primary">add User</button>
+  <table class="table table-striped">
+    <tr>
+      <!--th>id</th-->
+      <th>userName</th>
+      <!--th>password</th-->
+      <!-- <th>firstName</th>
+      <th>lastName</th>
+      <th>address</th>
+      <th>address2</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th> -->
+      <th>phone</th>
+      <th>email</th>
+      <!--th>organizationID</th-->
+      <th>accessLevel</th>
+      <!--th>Edit</th>
+      <th>Delete</th-->
+    </tr>
+    <tr ng-repeat="user in controller.users">
+      <!--td>{{user._id}}</td-->
+      <td>{{user.userName}}</td>
+      <!--td>{{user.password}}</td-->
+      <!-- <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.address}}</td>
+      <td>{{user.address2}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.state}}</td>
+      <td>{{user.zip}}</td> -->
+      <td>{{user.phone}}</td>
+      <td>{{user.email}}</td>
+      <!--td>{{user.organizationID}}</td-->
+      <td>{{user.accessLevel}}</td>
+      <!--td><button type="button" name="btnSave" ng-click="controller.editUserModal(user)">E</button></td>
+      <td><button type="button" name="btnDelete" ng-click="controller.deleteUser(user._id)">D</button></td-->
+    </tr>
+  </table>
+</div>

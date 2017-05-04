@@ -1,0 +1,63 @@
+<div class="modal-header">
+  <h2>Edit User</h2><br>
+</div>
+
+<div class="modal-body">
+  <table>
+    <tr>
+      <td>UserName:</td>
+      <td><input ng-model="controller.user.userName" required />*</td>
+    </tr>
+    <tr>
+      <td>firstName:</td>
+      <td><input type="text" ng-model="controller.user.firstName" required />*</td>
+    </tr>
+    <tr>
+      <td>lastName:</td>
+      <td><input type="text" ng-model="controller.user.lastName" required />*</td>
+    </tr>
+    <tr>
+      <td>password:</td>
+      <td><input type="text" ng-model="controller.user.password" required />*</td>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td><input type="text" ng-model="controller.user.email" required />*</td>
+    </tr>
+    <tr>
+      <td>address:</td>
+      <td><input type="text" ng-model="controller.user.address" /></td>
+    </tr>
+    <tr>
+      <td>address2:</td>
+      <td><input type="text" ng-model="controller.user.address2" /></td>
+    </tr>
+    <tr>
+      <td>city:</td>
+      <td><input type="text" ng-model="controller.user.city" /></td>
+    </tr>
+    <tr>
+      <td>state:</td>
+      <td><input type="text" ng-model="controller.user.state" /></td>
+    </tr>
+    <tr>
+      <td>zip:</td>
+      <td><input type="text" ng-model="controller.user.zip" /></td>
+    </tr>
+    <tr>
+      <td>phone:</td>
+      <td><input type="text" ng-model="controller.user.phone" /></td>
+    </tr>
+    <!-- <tr>
+      <td>accessLevel:</td>
+      <td><select ng-model="controller.user.accessLevel" value="controller.user.accessLevel" required >
+       <option ng-repeat="accessLevel in controller.displayedAccessLevel" value="{{accessLevel.level}}">{{accessLevel.display}}</option>
+     </select>*</td>
+    </tr> -->
+  </table>
+  </div>
+
+<div class="modal-footer">
+  <button ng-click="controller.ok()" class="btn btn-danger">Cancel</button>
+  <button ng-click="controller.editUser()" class="btn btn-primary">Save Edit</button>
+</div>
