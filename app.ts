@@ -7,15 +7,15 @@ import * as bodyParser from 'body-parser';
 import * as ejs from 'ejs';
 import * as mongoose from 'mongoose';
 
+require('dotenv').config({silent: true});
+
 import events from './api/eventApi';
 import users from './api/userApi';
 import student from './api/studentApi';
 import teams from './api/teamApi';
 import organizations from './api/organizationsApi';
 
-const CONNECTION_STRING = 'mongodb://admin:Pa$$w0rd@ds111441.mlab.com:11441/kidscarpool';
-
-mongoose.connect(CONNECTION_STRING)
+mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('Connection Established'))
   .catch((err) => console.log(err));
 
